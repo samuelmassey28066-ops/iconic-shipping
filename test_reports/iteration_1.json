@@ -1,0 +1,75 @@
+{
+  "iteration": 1,
+  "mode": "retest",
+  "summary": "Re-ran backend pytest suite and all previously-passing browser checks, then authored+passed the two remaining criteria (admin-console-flow, staff-hidden-tabs). All 13 checks pass; one transient rate-limit flake on rerun.",
+  "passed": 13,
+  "failed": 0,
+  "checks": [
+    {
+      "criterion": "Admin console backend behaviors (dashboard stats, enquiry status/notes/replies, quotation CRUD, send, settings, reports export, staff perms)",
+      "name": "test_tscheck_admin_console.py",
+      "lane": "backend",
+      "status": "passed",
+      "evidence": "pytest: 12 passed in 4.17s (full suite incl. admin_console, customer_portal, quote_track, security, service_inquiry files); admin_console file covers POST /api/admin/quotations -> 200, PATCH enquiry status -> 200, POST /quotations/{id}/send -> status 'sent'"
+    },
+    {
+      "criterion": "Home page renders",
+      "name": "home-page-renders",
+      "lane": "browser",
+      "status": "passed",
+      "evidence": "Re-ran by name: PASSED, screenshot home-page-renders-home.png"
+    },
+    {
+      "criterion": "Service pages load",
+      "name": "service-pages-load",
+      "lane": "browser",
+      "status": "passed",
+      "evidence": "Re-ran by name: PASSED, screenshot service-pages-load-last-service-page.png"
+    },
+    {
+      "criterion": "Service inquiry form submit",
+      "name": "service-inquiry-form-submit",
+      "lane": "browser",
+      "status": "passed",
+      "evidence": "Re-ran by name: PASSED, screenshot service-inquiry-form-submit-submitted.png"
+    },
+    {
+      "criterion": "Services card opens detail panel",
+      "name": "services-card-opens-panel",
+      "lane": "browser",
+      "status": "passed",
+      "evidence": "Re-ran by name: PASSED, 2 screenshots (panel-open, panel-closed)"
+    },
+    {
+      "criterion": "Quote form multistep submit + tracking",
+      "name": "quote-form-multistep-submit",
+      "lane": "browser",
+      "status": "passed",
+      "evidence": "Re-ran by name: PASSED, 2 screenshots (quote-success, track-result)"
+    },
+    {
+      "criterion": "Customer portal quotation flow",
+      "name": "customer-portal-quotation-flow",
+      "lane": "browser",
+      "status": "flaky",
+      "evidence": "First rerun FAILED: 429 Too Many Requests on enquiry submission (collided with the 6/min/IP limit right after quote-form-multistep-submit ran against the same IP). Rerun after 65s waiting period: PASSED with 3 screenshots (enquiry-submitted, quote-visible-in-portal, quote-accepted). Classified flaky per rate-limit collision, not an app bug."
+    },
+    {
+      "criterion": "Admin console UI flow: login, dashboard stats, Enquiries tab (search/open/status/note/reply/create quotation via QuoteBuilder with GST+discount total), Quotations tab send->status sent, Website tab phone edit reflected on public footer then restored, Reports download links, Email Outbox mock banner+items",
+      "name": "admin-console-flow",
+      "lane": "browser",
+      "status": "passed",
+      "evidence": "Fixture enquiry created via POST /api/enquiries (tscheck-admin-<ts> company), logged in as admin@iconicshipping.org, searched/opened the row, set status to in_progress, added internal note, sent reply, created quotation via qb-desc/qty/price/gst/discount (qb-total showed computed total), POST /api/admin/quotations -> 200 with quote_no, sent via admin-quote-send-<no> -> row shows 'sent', edited settings-phone-input to +91 9000011111 and saved, verified public footer-phone showed the new value on a fresh page, restored original phone and verified via toHaveValue, confirmed report-enquiries-* download link visible, confirmed outbox-mock-banner and outbox-item visible. 5 screenshots captured."
+    },
+    {
+      "criterion": "Staff restricted tabs: staff sees Dashboard/Enquiries/Quotations/Staff/Contact Messages/Outbox but not Website/Customers/Services/Reports",
+      "name": "staff-hidden-tabs",
+      "lane": "browser",
+      "status": "passed",
+      "evidence": "Logged in as staff@iconicshipping.org/Staff@123, asserted admin-nav-dashboard/enquiries/quotations/staff/messages/outbox visible, and admin-nav-website/customers/services/reports have count 0. 2 screenshots."
+    }
+  ],
+  "bugs": [],
+  "action_items": [],
+  "retest_needed": false
+}

@@ -1,0 +1,285 @@
+{
+  "project_name": "ICONIC SHIPPING SERVICES",
+  "theme": "light_corporate_ocean",
+  "typography": {
+    "font_family_heading": "Plus Jakarta Sans, sans-serif",
+    "font_family_body": "Inter, sans-serif",
+    "font_family_mono": "IBM Plex Mono, monospace",
+    "import_statement": "@import '@fontsource-variable/plus-jakarta-sans';\n@import '@fontsource-variable/inter';",
+    "scale_px": {
+      "display": 56,
+      "h1": 44,
+      "h2": 32,
+      "h3": 22,
+      "body": 16,
+      "caption": 14
+    },
+    "letter_spacing": {
+      "display": "-0.03em",
+      "h1": "-0.025em",
+      "h2": "-0.02em",
+      "h3": "-0.01em",
+      "overline": "0.15em"
+    }
+  },
+  "colors": {
+    "accent": "#0284C7",
+    "on_accent": "#FFFFFF",
+    "brand_navy": "#0B1D3A",
+    "brand_ocean_blue": "#0284C7",
+    "brand_cyan": "#0EA5E9",
+    "brand_sky_light": "#F0F7FF",
+    "brand_gold": "#D97706",
+    "whatsapp_green": "#25D366",
+    "surfaces": [
+      {
+        "name": "page",
+        "kind": "solid",
+        "bg": "#FFFFFF",
+        "on_bg": "#0B1D3A",
+        "on_bg_muted": "#475569",
+        "roles": {
+          "link": "#0284C7",
+          "error": "#DC2626",
+          "success": "#16A34A",
+          "highlight": "#0284C7"
+        }
+      },
+      {
+        "name": "panel_sky",
+        "kind": "solid",
+        "bg": "#F0F7FF",
+        "on_bg": "#0B1D3A",
+        "on_bg_muted": "#475569",
+        "roles": {
+          "link": "#0284C7",
+          "border": "#BAE6FD"
+        }
+      },
+      {
+        "name": "panel_white",
+        "kind": "solid",
+        "bg": "#FFFFFF",
+        "on_bg": "#0B1D3A",
+        "on_bg_muted": "#64748B",
+        "roles": {
+          "border": "#E2E8F0"
+        }
+      },
+      {
+        "name": "inverse_navy",
+        "kind": "solid",
+        "bg": "#0B1D3A",
+        "on_bg": "#FFFFFF",
+        "on_bg_muted": "#94A3B8",
+        "roles": {
+          "link": "#38BDF8",
+          "accent": "#0EA5E9",
+          "border": "#1E3A5F"
+        }
+      },
+      {
+        "name": "hero",
+        "kind": "gradient",
+        "contrast_against": "#FFFFFF",
+        "guarantee": "scrim: linear-gradient(105deg, #FFFFFF 0%, #F0F7FF 55%, rgba(240,247,255,0.7) 100%)",
+        "on_bg": "#0B1D3A",
+        "on_bg_muted": "#334155",
+        "roles": {
+          "link": "#0284C7",
+          "badge_bg": "#E0F2FE",
+          "badge_text": "#0369A1"
+        }
+      },
+      {
+        "name": "glass_header",
+        "kind": "glass",
+        "contrast_against": "#FFFFFF",
+        "guarantee": "backdrop-blur-md bg-white/90 border-b border-sky-100/80 shadow-xs",
+        "on_bg": "#0B1D3A",
+        "on_bg_muted": "#475569",
+        "roles": {
+          "link": "#0284C7",
+          "active": "#0284C7"
+        }
+      },
+      {
+        "name": "cta_sunset",
+        "kind": "image",
+        "contrast_against": "#081225",
+        "guarantee": "scrim: linear-gradient(rgba(11,29,58,0.85), rgba(11,29,58,0.92))",
+        "on_bg": "#FFFFFF",
+        "on_bg_muted": "#CBD5E1",
+        "roles": {
+          "link": "#38BDF8",
+          "cta_btn": "#0284C7"
+        }
+      },
+      {
+        "name": "badge_ocean",
+        "kind": "solid",
+        "bg": "#E0F2FE",
+        "on_bg": "#0369A1",
+        "on_bg_muted": "#075985"
+      },
+      {
+        "name": "badge_status_green",
+        "kind": "solid",
+        "bg": "#DCFCE7",
+        "on_bg": "#15803D",
+        "on_bg_muted": "#166534"
+      },
+      {
+        "name": "badge_status_amber",
+        "kind": "solid",
+        "bg": "#FEF3C7",
+        "on_bg": "#B45309",
+        "on_bg_muted": "#92400E"
+      }
+    ]
+  },
+  "entry_surfaces": {
+    "/": "split hero — brand value proposition + CTA pills left, container ship & floating trust cards right with wave bottom",
+    "/about": "editorial storytelling — company legacy at Gandhidham & Deendayal Port, leadership overview, credentials grid",
+    "/services": "category grid & 30+ service directory with instant filter and WhatsApp inquiry triggers",
+    "/service/:slug": "service deep-dive with slide-in quote drawer, technical specifications, and before-after hold cleaning gallery",
+    "/quote": "multi-step marine quotation builder — vessel details, port selection, scope checklist, instant calculation & WhatsApp dispatch",
+    "/track": "live enquiry and consignment tracking interface with status timeline and direct port officer contact",
+    "/customer/login": "branded maritime portal login — port logistics reassurance left, secure auth card right",
+    "/customer/register": "branded company onboarding with vessel registration & IMO number inputs",
+    "/customer/dashboard": "vessel operator control center — active inquiries, approved quotes, PDF downloads, and compliance docs",
+    "/admin": "master operations terminal — enquiry pipeline, quotation editor with GST, service directory manager, and contact settings"
+  },
+  "visual_enhancers": {
+    "wave_divider_svg": "Smooth oceanic curves transitioning between white and soft sky blue (#F0F7FF) or dark navy (#0B1D3A)",
+    "glass_trust_bar": "Rounded floating pill/card with backdrop-blur-md, soft shadow, housing 24/7 Port Support, ISO Certified, IMO Compliant stats",
+    "floating_action_buttons": {
+      "whatsapp": {
+        "position": "fixed bottom-6 right-6 z-50",
+        "bg": "#25D366",
+        "icon": "MessageSquare or PhoneCall",
+        "label": "Chat with Port Ops (+91 9712476193)",
+        "pulse_effect": "animate-bounce or subtle glowing ring"
+      },
+      "quick_email": {
+        "position": "fixed bottom-20 right-6 z-50",
+        "bg": "#0284C7",
+        "icon": "Mail",
+        "label": "supply@iconicshipping.org"
+      }
+    },
+    "scroll_progress_bar": "Top fixed 3px progress bar in #0284C7 ocean blue",
+    "slide_in_side_panel": "Right-docked navigation & fast-inquiry drawer with smooth Motion spring transition"
+  },
+  "image_urls": {
+    "hero_container_ship": {
+      "url": "https://images.unsplash.com/photo-1595587637401-83ff822bd63e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1Mjh8MHwxfHNlYXJjaHw0fHxjb250YWluZXIlMjBzaGlwJTIwcG9ydHxlbnwwfHx8fDE3OTMzODA1OTN8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Large blue and red container ship docked at industrial port pier under bright sky",
+      "placement": "Hero right-hand visual blend with soft gradient mask and floating badges"
+    },
+    "hero_dock_cranes": {
+      "url": "https://images.unsplash.com/photo-1578575437130-527eed3abbec?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1Mjh8MHwxfHNlYXJjaHwzfHxjb250YWluZXIlMjBzaGlwJTIwcG9ydHxlbnwwfHx8fDE3OTMzODA1OTN8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Cargo ships docked at harbor terminal with heavy-duty loading cranes",
+      "placement": "Port Clearance & Marine Logistics section feature image"
+    },
+    "port_aerial_containers": {
+      "url": "https://images.unsplash.com/photo-1678182451047-196f22a4143e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1Mjh8MHwxfHNlYXJjaHwyfHxjb250YWluZXIlMjBzaGlwJTIwcG9ydHxlbnwwfHx8fDE3OTMzODA1OTN8MA&ixlib=rb-4.1.0&q=85",
+      "description": "High angle perspective of vast container terminal and logistics hub",
+      "placement": "About Us Indian Port Supply showcase and Network Map"
+    },
+    "sunset_ship_cta": {
+      "url": "https://images.unsplash.com/photo-1554254648-2d58a1bc3fd5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2OTV8MHwxfHNlYXJjaHwyfHxzaGlwJTIwc3Vuc2V0JTIwb2NlYW58ZW58MHx8fHwxNzkzMzgwNTkzfDA&ixlib=rb-4.1.0&q=85",
+      "description": "Majestic commercial vessel navigating calm ocean waters at golden sunset",
+      "placement": "Ready to Move Your Cargo CTA Banner background"
+    },
+    "harbor_cranes_dusk": {
+      "url": "https://images.unsplash.com/photo-1598193957011-39b9f2916992?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NjV8MHwxfHNlYXJjaHwxfHxzaGlwJTIwaGFyYm9yJTIwY3JhbmVzfGVufDB8fHx8MTc5MzM4MDU5M3ww&ixlib=rb-4.1.0&q=85",
+      "description": "Illuminated port terminal cranes and berthed tugs during twilight operations",
+      "placement": "Hold Cleaning & Technical Services video trigger card"
+    }
+  },
+  "service_categories": [
+    {
+      "id": "port-clearance",
+      "title": "Port Clearance & Marine Logistics",
+      "sub_items_count": 16,
+      "icon": "Anchor",
+      "highlights": ["Deendayal / Kandla Port Berth Coordination", "Customs Clearance & Stevedoring", "Bunker Supply & Fresh Water Delivery", "Crew Change & Shore Passes", "Sludge & Garbage Disposal Certification"]
+    },
+    {
+      "id": "hold-tank-cleaning",
+      "title": "Hold Cleaning & Tank Squeezing",
+      "sub_items_count": 12,
+      "icon": "Sparkles",
+      "highlights": ["High-pressure Hydro-blasting (500 bar)", "Chemical Washing for Grain & Chemical Loading", "Tank Squeezing & Gas-Free Certification", "Before & After Photographic Survey", "Rapid 24-Hour Turnaround Team"]
+    },
+    {
+      "id": "marine-machinery",
+      "title": "Marine Machinery & Equipment",
+      "sub_items_count": 8,
+      "icon": "Cog",
+      "highlights": ["Main Engine Spare Parts (OEM/Reconditioned)", "Auxiliary Engines, Turbochargers, Governors", "Purifiers, Compressors, Pumps & Heat Exchangers", "Deck Machinery & Winch Components"]
+    },
+    {
+      "id": "electrical-electronics",
+      "title": "Electrical & Electronic Equipment",
+      "sub_items_count": 6,
+      "icon": "Zap",
+      "highlights": ["Navigation & GMDSS Radio Equipment", "Radar, Gyrocompass, Echo Sounders & AIS", "Switchboard Overhaul & Automation Relays", "Motor Rewinding & Generator Servicing"]
+    },
+    {
+      "id": "ship-chandling",
+      "title": "Ship Chandling & Supplies",
+      "sub_items_count": 10,
+      "icon": "ShoppingBag",
+      "highlights": ["Deck & Engine Stores (IMPA / ISSA standards)", "Bonded Stores & Duty-Free Consumables", "Fresh, Frozen & Dry Provisions for International Crews", "Safety Equipment & Cabin Utensils"]
+    },
+    {
+      "id": "marine-consumables",
+      "title": "Marine Consumables & Fluids",
+      "sub_items_count": 7,
+      "icon": "Droplet",
+      "highlights": ["Marine Paints, Primers & Epoxy Coatings", "Lube Oils, Hydraulic Fluids & Greases", "Water Treatment & Boiler Chemicals", "Welding Gases, Rods & Degreasers"]
+    },
+    {
+      "id": "lsa-ffa",
+      "title": "LSA/FFA Inspection & Certification",
+      "sub_items_count": 8,
+      "icon": "ShieldCheck",
+      "highlights": ["Annual Lifeboat & Davit Inspections", "Liferaft Servicing & Hydrostatic Testing", "Fixed CO2 & Foam Fire Suppression Systems", "SCBA, EEBD & Portable Extinguisher Refills"]
+    },
+    {
+      "id": "marine-repair",
+      "title": "Marine Repair & Maintenance",
+      "sub_items_count": 9,
+      "icon": "Wrench",
+      "highlights": ["Afloat Hull Steel Renewal & Certified Coded Welding", "Pipe Line Fabrication & Hydraulic Repairs", "Underwater Hull Inspection & Cleaning", "Propeller Polishing & Voyage Repairs"]
+    }
+  ],
+  "motion_guidelines": {
+    "viewport_reveal": "initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}",
+    "stagger_children": "transition={{ staggerChildren: 0.08 }}",
+    "hover_card": "whileHover={{ y: -4, transition: { duration: 0.2 } }}",
+    "hero_ship_parallax": "Subtle scale and position shift responding to scroll progress",
+    "reduced_motion": "Wrap custom motion hooks in useReducedMotion() or respect prefers-reduced-motion media query"
+  },
+  "contact_info": {
+    "company_name": "ICONIC SHIPPING SERVICES",
+    "founder_owner": "VIKASH",
+    "phone_primary": "+91 9712476193",
+    "whatsapp": "+91 9712476193",
+    "email": "supply@iconicshipping.org",
+    "location": "Gandhidham, Gujarat, India (Deendayal / Kandla & Mundra Port Gateway)",
+    "operating_hours": "24/7 Vessel Support & Emergency Port Operations"
+  },
+  "instructions_to_main_agent": [
+    "1. Structure pages with clean white and sky-blue sections, using dark navy (#0B1D3A) for bold headings with sky-blue (#0284C7) highlighted spans as seen in the reference screenshot.",
+    "2. Implement the floating glass Trust Bar in the hero containing 'Global Network', '24/7 Support', 'Safe & Reliable' with real Indian port authority compliance metrics.",
+    "3. Build the 'Our 30+ Specialized Services' interactive directory with category filters, numbered circles (01, 02, 03...), search bar, and 1-click WhatsApp quote links.",
+    "4. Feature Hold Cleaning & Tank Squeezing with an interactive before/after interactive comparison viewer, checklist pills, and high-pressure cleaning specifications.",
+    "5. Ensure the top Navigation bar features the slide-in right drawer panel on mobile/hamburger, quick phone pill button on desktop (+91 9712476193), and seamless route links.",
+    "6. Provide both a Customer Portal (quotation management, IMO vessel profile, PDF download) and an Admin Operations Console (manage incoming enquiries, update status, generate quotation line items with GST).",
+    "7. Include permanent floating action buttons for WhatsApp (+91 9712476193 with pre-filled vessel inquiry text) and Direct Email (supply@iconicshipping.org).",
+    "8. Apply data-testid attributes to all CTA buttons, tabs, enquiry forms, and filters."
+  ]
+}
