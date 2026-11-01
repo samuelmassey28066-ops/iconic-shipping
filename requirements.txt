@@ -1,2 +1,3 @@
-Flask
-gunicorn
+git add requirements.txt
+git commit -m "Removed missing package emergentintegrations"
+git push origin main
